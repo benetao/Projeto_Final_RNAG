@@ -122,11 +122,15 @@ Ademais, no final do curso, foi proposto um trabalho final, que será realizado 
 ## Progresso do Projeto <a name="progresso"></a>
 
 - [x] Definir tema
-    - [x] ...
+    - [x] Algoritmos genéticos para delegação de leitos em emergências obstétricas
     
-- [ ] Desenvolvimento do Código
+- [x] Desenvolvimento do Código
+    - [x] Uso do código do experimento A.07 (algoritmos genéticos com restrições)
+    - [x] Alteração das funções
+    - [x] Alteração dos dicionários
+    - [ ] Desenvolvimento de plataforma interativa
     
-- [ ] Apresentação
+- [x] Apresentação
 
 
 
