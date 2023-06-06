@@ -180,9 +180,9 @@ def funcao_objetivo_maternidade(individuo, objetos, limite, ordem_dos_nomes):
       quando o peso excede o limite.
     """
 
-    hemorrgia_total, idade_gestacional_total, dor_total, meows_total, choque_total, leitos_total = computa_mochila(individuo, objetos, ordem_dos_nomes)
+    hemorrgia_total, idade_gestacional_total, dor_total, meows_total, choque_total, leitos_total= computa_mochila(individuo, objetos, ordem_dos_nomes)
     peso_mochila = leitos_total
-    valor_mochila = hemorrgia_total + 2 * idade_gestacional_total + 10 * dor_total + meows_total + choque_total
+    valor_mochila = hemorrgia_total + idade_gestacional_total + dor_total + meows_total + choque_total
     
     if peso_mochila > limite:
         valor_mochila = 0.01 #problema de maximizacao, para o algoritmo nao escolher esse item
