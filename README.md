@@ -56,7 +56,7 @@
 
 
 
-<!-- Sobre a Disciplina e o Projeto -->
+<!-- Sobre a Disciplina -->
 ## Sobre a Disciplina <a name="sobre"></a>
 Na disciplina Redes Neurais e Algorítmos Genéticos, ministrada pelo professor Daniel Cassar, nós- alunos- vemos duas ferramentas computacionais inspiradas em conceitos da
 biologia:
@@ -69,7 +69,17 @@ Portanto, no presente repositório você encontra, dentro das pastas  `Algoritmo
  
 Ademais, no final do curso, foi proposto um trabalho final, que será realizado em grupos de 4 pessoas, descrito mais abaixo.
 
-### O Projeto <a name= "projeto"></a>
+
+<br>
+
+<!-- Sobre o Projeto -->
+## Aplicação de Algoritmos Genéticos no problema da alocação de leitos em urgências e emergências obstétricas <a name="sobre"></a>
+A alocação de leitos foi uma questão que recebeu bastante destaque durante a pandemia de COVID-19, por exemplo. A insuficiência do número de quartos nos hospitais em comparação com o número de pessoas que necessitam de atendimentos, especialmente no SUS, não é novidade. Considerando essa problemática, resolvemos utilizar algoritmos genéticos para nos auxiliar na alocação de leitos de acordo com características dos pacientes que desejam atendimento.
+
+Inicialmente, não havíamos definido uma população específica. Contudo, com o avançar das discussões, entendemos que,para definir critérios no código, a melhor opção era trabalhar com um grupo de pessoas que dividissem aspectos em comum. Por conta disso, optamos por trabalhar com pessoas gestantes em busca de atendimento em postos de urgência e emergência obstétrica.
+
+É importante ressaltar que todos os dados que estamos utilizando no desenvolvimento do projeto são inventados. Contudo, nossos critérios de classificação são os mesmos que são utilizados em serviços de saúde.
+
 ................
 
 ## Integrantes do Grupo <a name="integrantes"></a>
@@ -128,7 +138,7 @@ Ademais, no final do curso, foi proposto um trabalho final, que será realizado 
     - [x] Uso do código do experimento A.07 (algoritmos genéticos com restrições)
     - [x] Alteração das funções
     - [x] Alteração dos dicionários
-    - [ ] Desenvolvimento de plataforma interativa
+    - [x] Desenvolvimento de plataforma interativa
     
 - [x] Apresentação
 
@@ -161,22 +171,6 @@ Sem a ajuda dos professores e técnicos da Ilum, nós não teriamos conseguido c
         <img src="https://user-images.githubusercontent.com/106626661/225808282-8a7219bc-77e7-4626-a5f4-d80ea97c755d.png" width="100px;" alt="Foto do Gui"/><br>
         <sub>
           <b>Guilherme Dariani (Glia) </b>
-        </sub>
-      </a>
-    </td>
-        <td align="center">
-      <a href="#">
-        <img src="https://user-images.githubusercontent.com/106626661/225807900-f34e75aa-cb89-43c7-9747-63f9eb6eec7b.png" width="100px;" alt="Foto do Pepe"/><br>
-        <sub>
-          <b>Pedro Sophia (Glia)</b>
-        </sub>
-      </a>
-    </td>
-       <td align="center">
-      <a href="#">
-        <img src="https://user-images.githubusercontent.com/106626661/226813894-c6ff60de-9569-40dc-b9c9-65d3144baeb6.png" width="100px;" alt="Foto do Pepe"/><br>
-        <sub>
-          <b>João Pedro Brito(Glia)</b>
         </sub>
       </a>
     </td>

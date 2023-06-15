@@ -1,3 +1,5 @@
+import random
+
 def computa_maternidade(individuo, objetos, ordem_dos_nomes):
     """Computa o valor de sintomas importantes em uma emergência de maternidade.
     Args:
@@ -11,8 +13,8 @@ def computa_maternidade(individuo, objetos, ordem_dos_nomes):
     Returns:
       hemorragia_total: valor de níveis de hemorragia.
       idade_gestacional_total: tempo de gestação de mulheres em uma emergência em unudade de semanas.
-      dor_total:
-      meows_total:
+      dor_total: nível da dor
+      meows_total: classificação que 
       choque_total: 
       leitos_total: 
     """
@@ -34,15 +36,17 @@ def computa_maternidade(individuo, objetos, ordem_dos_nomes):
             leitos = objetos [nome_do_item]["leito"]
             
             
-            hemorragia_total =+ hemorragia
-            idade_gestacional_total =+ gestacional
-            dor_total =+ dor
-            meows_total=+ meows
-            choque_total =+ choque
-            leitos_total =+ leitos 
+            hemorragia_total += hemorragia
+            idade_gestacional_total += gestacional
+            dor_total += dor
+            meows_total += meows
+            choque_total += choque
+            leitos_total += leitos 
+            
+    valor_mochila = 25*hemorragia_total + 2 * idade_gestacional_total + 10 * dor_total + 25*meows_total + 33 * choque_total
             
 
-    return hemorrgia_total, idade_gestacional_total, dor_total, meows_total, choque_total, leitos_total
+    return valor_mochila, leitos_total
 
 
 
@@ -58,33 +62,38 @@ def gene_cb():
 
 
 
-def individuo_cv(mulheres):
-    """Sorteia uma opção possível de mulheres a serem escolhidas para serem atendidas.
+def individuo_cb (n):
+    ''' Gera um individuo para o problema da caixa binaria
+    
     Args:
-      mulheres:
-        Dicionário onde as chaves são mulheres e os valores são níveis de sintomas.
+       n: numero de genes do individuo
+    
     Return:
-      Retorna uma lista de mulheres formando uma ordem de mulheres que serão atendidas.
-    """
-    nomes = list(mulheres.keys())
-    random.shuffle(nomes) #shuffle muda a ordem da minha lista
-    return nomes
+        Uma lista com n genes. Cada gene é um valor zero ou um
+    '''
+    individuo = []
+    for i in range(n):
+        gene = gene_cb()
+        individuo.append(gene)
+    return individuo
 
 
-def populacao_inicial_cv(tamanho, mulheres):
-    """Cria população inicial no problema da maternidade.
-    Args
-      tamanho:
-        Tamanho da população.
-      mulheres:
-        Dicionário onde as chaves são mulheres e os valores são níveis de sintomas.
-    Returns:
-      Lista com todos os indivíduos da população no problema da maternidade.
-    """
+
+def populacao_cb(tamanho, n):
+    ''' cria uma população no problema das.
+    
+    Args:
+       n: numero de gene de um individuo
+       tamanho: tamanho da população
+    
+    Return:
+        Uma lista onde cada item é um individuo. Um individuo é uma lista com n genes.
+    '''
     populacao = []
     for _ in range(tamanho):
-        populacao.append(individuo_cv(mulheres))
+        populacao.append(individuo_cb(n)) #ele está criando uma pop a partir de uma funcao que ja existe, n vezes
     return populacao
+
 
 
 
@@ -180,9 +189,9 @@ def funcao_objetivo_maternidade(individuo, objetos, limite, ordem_dos_nomes):
       quando o peso excede o limite.
     """
 
-    hemorrgia_total, idade_gestacional_total, dor_total, meows_total, choque_total, leitos_total= computa_mochila(individuo, objetos, ordem_dos_nomes)
+    valor_mochila, leitos_total = computa_maternidade(individuo, objetos, ordem_dos_nomes)
     peso_mochila = leitos_total
-    valor_mochila = hemorrgia_total + idade_gestacional_total + dor_total + meows_total + choque_total
+    
     
     if peso_mochila > limite:
         valor_mochila = 0.01 #problema de maximizacao, para o algoritmo nao escolher esse item
