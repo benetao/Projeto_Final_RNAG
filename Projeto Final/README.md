@@ -1,22 +1,15 @@
-# Experimentos de otimização e algoritmos genéticos
-Olá, leitor! Nessa pasta, você encontra todos os experimentos de Algoritmos genéticos realizados por mim, Isabela Beneti, na disciplina de Redes Neurais e Algorítmos Genéticos (RNAG). Para saber mais sobre eles, você pode acessar os notebooks, ou clicar nos subtópicos abaixo:
-<details><summary><b>Experimento A0.1</b></summary>
+# 
+Olá, leitor! Para você se localizar nessa pasta, clique em cada um dos subtópicos abaixo para entender o que cada arquivo da pasta contém:
+<details><summary><b>Alocando leitos com AG</b></summary>
 
 
-O primeiro experimento, resolvido no notebook "experimento A.01" foi resolvido em classe utilizando python puro, isto é, apenas python e as bibliotecas já embutidas no JupyterNotebook. Nele, nós resolvemos o problema de **4 caixas binárias** utilizando o método de **busca aleatória**. Para tanto, escrevemos 3 funções que, ao final, devolviam uma resposta diferente a cada vez que rodávamos a célula
+Esse arquivo `.ipynb` contem o nosso código comentado e interpretado. Nele, nós buscamos utilizar algoritmos genéticos para apresentar uma possível solução ao problema de alocação de leitos na maternidade de hospitais. Para tanto, foi necessário utilizar as funções importadas do arquivo `funcoes_alocacao`.
 
-
-Logo, concluímos que o método de busca aleatória é **probabilístico**, e não determinístico.
-
-  
-ATUALIZAÇÃO 16/03: ao invés de definirmos as funções nesse notebook, transferimo-nas para o arquivo "funcoes.py" e importamo-nas
-  
+ 
 </details>
-<details><summary><b>Experimento A0.2</b></summary>
+<details><summary><b>funcoes_alocacao</b></summary>
 
+Esse arquivo `.py` funciona basicamente como biblioteca para o desenvolvimento do nosso algoritmo genético. Todas as funções contidas nele foram importadas no arquivo `Alocando leitos com AG`
 
-No segundo experimento,  resolvemos o problema de **caixas binárias** utilizando o método de **busca em grade**. Para tanto, importamos uma função entre as funções escritas no experimento A.01. A partir desse método, conseguimos analisar todas os indivíduos (candidatos) possíveis, e, por isso, o código sempre nos retornava a mesma resposta.
-
-Logo, concluímos que o método de busca em grade **determinístico**, e não probabilístico .
 </p>
 </details>
